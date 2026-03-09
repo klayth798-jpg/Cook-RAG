@@ -1,0 +1,31 @@
+# C10 RAG系统依赖（Milvus版本）
+# 基于C8项目迁移，FAISS替换为Milvus
+
+# LangChain核心框架
+langchain==0.3.26
+langchain-huggingface==0.3.1
+langchain-text-splitters==0.3.8
+langchain-community==0.3.27
+
+# Milvus向量数据库（替代faiss-cpu）
+pymilvus==2.5.11
+
+# Embedding模型
+sentence-transformers>=3.0.0
+
+# BM25稀疏检索
+rank_bm25==0.2.2
+
+# LLM调用
+openai>=1.86.0
+
+# 环境变量管理
+python-dotenv>=1.0.0
+
+# MCP (Model Context Protocol) Skill系统
+mcp>=1.0.0                    # MCP Python SDK (客户端)
+mcp-server-fetch>=0.1.0       # 官方网页抓取 MCP Server (开源)
+langchain-openai>=0.3.0       # Function Calling 驱动 SkillRouter
+
+# 联网搜索
+requests>=2.31.0              # Tavily HTTP API 调用
